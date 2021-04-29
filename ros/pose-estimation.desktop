@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.9.4
+Type=Application
+Name=pose-estimation
+Comment=
+Exec=xfce4-terminal -e 'bash -c "source /opt/ros/eloquent/local_setup.bash; cd /workspace/ros2_ws; colcon build; source /workspace/ros2_ws/install/local_setup.bash; ros2 launch ros2_trt_pose pose-estimation.launch.py"'
+OnlyShowIn=XFCE;
+StartupNotify=false
+Hidden=false

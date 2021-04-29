@@ -1,0 +1,12 @@
+version: '2.1'
+
+services:
+  main:
+    build: ./ros
+    restart: always
+    network_mode: host
+    privileged: true
+    environment:
+            - UDEV=1
+    devices:
+            - "/dev:/dev"

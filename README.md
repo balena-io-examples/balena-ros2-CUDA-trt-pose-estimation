@@ -1,6 +1,6 @@
 # balena ROS Jetson TRT Pose Estimation container
 
-[![balena deploy button](https://www.balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balena-io-examples/balena-ros2-foxy-desktop/)
+[![balena deploy button](https://www.balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balena-io-examples/balena-ros2-CUDA-trt-pose-estimation/)
 
 ## About
 This repo installs [ROS Eloquent](https://docs.ros.org/en/eloquent/Releases.html) into a 64-bit Ubuntu Arm container and runs live inferencing doing human pose detection and estimation using a camera, ready to be deployed on an NVIDIA Jetson device running balenaOS.  This repo specifically makes use of CUDA, so, no other device types (Raspberry Pi, Beagle, etc) will work.  The Dockerfile adds the basic requirements, adds the ROS key and APT sources, installs the ROS binaries and packages, then brings in OpenCV, CUDA, PyTorch, and the rest of the neeeded components.  Also keep in mind that this repo sets up the ROS Eloquent "Desktop" install, which is a fully featured (i.e., large) installation including a desktop GUI and Rviz for visualization.  If you only need the minimal ROS installation, there is also a "Base" repo available here: https://github.com/balena-io-examples/balena-ros2-foxy-base, which makes for a slimmer container, but that does not include any CUDA tooling or computer vision capability out-of-the-box.
